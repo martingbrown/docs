@@ -27,9 +27,9 @@ Content that can be hosted by an [!INCLUDE[TLA#tla_xbap](../../../../includes/tl
   
     -   Returning state information that describes how the calling page was completed (for example, whether a user pressed an OK button or a Cancel button).  
   
-    -   Returning that data that was collected from the user (for example, new employee details).  
+    -   Returning the data that was collected from the user (for example, new employee details).  
   
--   When the calling page returns to the called page, the called page is removed from navigation history to isolate one instance of a called page from another.  
+-   When the called page returns to the calling page, the called page is removed from navigation history to isolate one instance of a called page from another.  
   
  These behaviors are illustrated by the following figure.  
   
@@ -123,7 +123,7 @@ Content that can be hosted by an [!INCLUDE[TLA#tla_xbap](../../../../includes/tl
   
     -   Retrieve and use the parameters stored in <xref:System.Windows.Application.Properties%2A>.  
   
- But, as you'll see shortly, you'll still need use code to instantiate and navigate to the called page to collect the data returned by the called page. For this reason, the <xref:System.Windows.Navigation.PageFunction%601> needs to be kept alive; otherwise, the next time you navigate to the <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instantiates the <xref:System.Windows.Navigation.PageFunction%601> using the default constructor.  
+ But, as you'll see shortly, you'll still need to use code to instantiate and navigate to the called page to collect the data returned by the called page. For this reason, the <xref:System.Windows.Navigation.PageFunction%601> needs to be kept alive; otherwise, the next time you navigate to the <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instantiates the <xref:System.Windows.Navigation.PageFunction%601> using the default constructor.  
   
  Before the called page can return, however, it needs to return data that can be retrieved by the calling page.  
   
